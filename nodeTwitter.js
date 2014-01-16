@@ -27,7 +27,7 @@ stream.on('data', function(data) {
     console.log(data.text);
 
     //seach that tweet to see if it contains the text 'javascript'
-    if(data.text.toLowerCase().search("javascript")){
+    if(data.text.toLowerCase().search("javascript") != -1){
 
       // post to facebook
       FB.api('me/feed', 'post', { message: fbPostText}, function (res) {
